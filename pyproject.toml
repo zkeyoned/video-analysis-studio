@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "local-video-analysis-agent"
+version = "0.1.0"
+description = "Scene-aware video perception tools for AI agents"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "httpx>=0.28,<1",
+  "mcp>=1.20,<2",
+  "opencc-python-reimplemented>=0.1.7,<1",
+  "yt-dlp>=2026.6,<2027",
+]
+
+[project.scripts]
+video-agent = "video_agent.cli:main"
+video-agent-mcp = "video_agent.mcp_server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/video_agent"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

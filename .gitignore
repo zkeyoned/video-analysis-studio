@@ -1,0 +1,13 @@
+.env
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+output/*
+!output/.gitkeep
+samples/*
+!samples/.gitkeep
+models/*.bin
+models/*.download
+desktop/Resources/*-source.png

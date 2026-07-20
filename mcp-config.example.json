@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "video-analysis-agent": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/absolute/path/to/video-agent",
+        "run",
+        "video-agent-mcp"
+      ]
+    }
+  }
+}
